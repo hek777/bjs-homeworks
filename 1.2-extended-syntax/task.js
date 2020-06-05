@@ -19,9 +19,9 @@ function getResult(a,b,c){
 function getAverageMark(marks) {
     let averageMark = 0;
     if (marks.length > 5) {
-        marks.splice(5);
         averageMark = 'Производится расчет только из 5 оценок!';
         return averageMark;
+        marks.splice(5);
     } else if (marks.length === 0) {
         return 0;
     }
@@ -31,10 +31,10 @@ function getAverageMark(marks) {
     return averageMark / marks.length;
 }
 
-function askDrink(name,dateOfBirthday){
+function askDrink(name,dateOfBirthday) {
     let result = new Date().getFullYear(); 
     if (result - dateOfBirthday.getFullYear() > 18) {
-        return `Не желаете ли олд-фэшн ${name}`;
+        return `Не желаете ли олд-фэшн ${name}?`;
     } else {
         return `Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`;
     };
