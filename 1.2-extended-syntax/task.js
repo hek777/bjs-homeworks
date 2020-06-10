@@ -19,8 +19,6 @@ function getResult(a,b,c){
 function getAverageMark(marks) {
     let averageMark = 0;
     if (marks.length > 5) {
-        averageMark = 'Производится расчет только из 5 оценок!';
-        return averageMark;
         marks.splice(5);
     } else if (marks.length === 0) {
         return 0;
