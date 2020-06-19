@@ -71,5 +71,34 @@ console.log(getAverageScore({
     french: [5,5,5,5,5]
 }));
 
+// задание 3
+function getPersonData(secretData) {
+    
+    let result = new Object;
+    for (let i in secretData) {
+      if (i =="aaa") {
+        result.firstName = getDecodedValue(secretData[i]);
+      } else if (i =="bbb") {
+        result.lastName = getDecodedValue(secretData[i]);
+      }
+    }
+    console.log(result);
+};
+
+
+function getDecodedValue(secret) {
+    if (secret == 0) {
+        name = "Родриго";
+      } else if (secret == 1) {
+        name = "Эмильо";
+      }
+      return name;
+};
+
+secretData = {
+    aaa: 1,
+    bbb: 1
+};
+getPersonData(secretData);
 
 
