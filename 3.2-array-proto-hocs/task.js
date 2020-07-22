@@ -25,7 +25,7 @@ function memorize(fn, limit) {
     let memory = [];
 
     return (...args) => {
-       //console.log(memory);
+      
         const arr = Array.from(args);
         const item = memory.find((item) => compareArrays(item.args, arr));
         if (item !== undefined) {
